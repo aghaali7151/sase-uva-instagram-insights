@@ -1,7 +1,22 @@
 # SASE at UVA Instagram Insights
 
-Pirate Signal is a static dashboard with a weekly performance chart, milestones, a searchable content explorer, and an original audio loop.
+Pirate Signal is a static dashboard with a weekly performance chart, milestone timeline, searchable content explorer, and an original audio loop.
 
-Serve the site with `python -m http.server 8000 --directory dist` and open `http://localhost:8000`.
+## Run locally
 
-This private repository contains the same dashboard data as the deployed site in `dist/data.js`. Keep the repository and any deployment of this dataset access-controlled. Keep raw exports, credentials, and private deployment configuration outside version control.
+From the repository root, start a static server:
+
+```sh
+python -m http.server 8000 --directory site
+```
+
+Open [localhost:8000](http://localhost:8000). No build or dependencies are required.
+
+## Repository layout
+
+- `site/index.html` — Dashboard entry point
+- `site/assets/` — Stylesheets, JavaScript, and audio
+- `site/data/instagram.js` — The fall 2026 Instagram dashboard dataset
+- `design/references/` — Source artwork from earlier design iterations
+
+The dataset and milestone content are part of this repository. Keep raw exports, API keys, environment files, and private deployment settings outside version control.

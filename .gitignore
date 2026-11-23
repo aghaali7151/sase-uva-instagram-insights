@@ -4,7 +4,7 @@
 /exports/
 *.csv
 *.tsv
-/dist/*-private.*
+*-private.*
 
 # Deployment and secrets
 /.openai/
