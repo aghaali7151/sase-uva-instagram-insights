@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Instagram performance for the Society of Asian Scientists and Engineers at the University of Virginia.">
+  <title>SASE @ UVA Instagram Insights</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="skins.css">
+  <link rel="stylesheet" href="metro.css">
+  <link rel="stylesheet" href="pirate.css">
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+  <script defer src="deck.js"></script>
+  <script defer src="artwork.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to dashboard</a>
+  <header class="masthead">
+    <div class="wrap mast-inner">
+      <a class="brand" href="#main"><span class="mark">S</span><span>SASE <small>AT UVA</small></span></a>
+      <nav aria-label="Dashboard"><a href="#performance">Performance</a><a href="#timeline">Timeline</a><a href="#library">Content</a></nav>
+      <a class="handle" href="https://www.instagram.com/saseatuva/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M3 1h10v1h2v2h1v8h-1v2h-2v1H3v-1H1v-2H0V4h1V2h2zm0 2v1H2v8h1v1h10v-1h1V4h-1V3zm3 2h4v1h1v4h-1v1H6v-1H5V6h1zm1 2v2h2V7zm4-3h2v2h-2z"/></svg>@saseatuva</a>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <section class="intro" aria-labelledby="title">
+      <div><h1 id="title">SASE @ UVA <em>Instagram Insights</em></h1>
+      <p>Social media performance for the Society of Asian Scientists and Engineers at the University of Virginia.</p></div>
+      <div class="period"><span>Fall semester</span><strong>Aug 20 – Nov 21, 2026</strong></div>
+      <div class="signal-art" aria-label="Movable title artwork">
+        <button class="art-piece art-rings" type="button" aria-label="Move broadcast rings"></button>
+        <button class="art-piece art-wave" type="button" aria-label="Move signal waveform"></button>
+        <button class="art-piece art-code" type="button" aria-label="Move binary label">01010011 01000001<br>01010011 01000101</button>
+        <button class="art-piece art-barcode" type="button" aria-label="Move barcode"></button>
+        <button class="art-piece art-disc" type="button" aria-label="Move mini disc"></button>
+        <button class="art-piece art-bolt" type="button" aria-label="Move lightning bolt"></button>
+        <button class="art-piece art-pixels" type="button" aria-label="Move pixel checkerboard"></button>
+      </div>
+    </section>
+    <section id="performance" aria-labelledby="performance-title">
+      <div class="section-head">
+        <h2 id="performance-title">Performance</h2>
+        <div class="filters" aria-label="Filter dashboard">
+          <button type="button" data-scope="all" aria-pressed="true">All content</button>
+          <button type="button" data-scope="feed" aria-pressed="false">Feed posts</button>
+          <button type="button" data-scope="story" aria-pressed="false">Stories</button>
+        </div>
+      </div>
+      <dl class="stats" id="stats" aria-live="polite"></dl>
+      <div class="activity">
+        <div class="chart-panel">
+          <div class="chart-head"><div><h3>Performance by publish week</h3><p>Lifetime totals grouped by the week each item was posted.</p></div>
+          <label>Metric <select id="metric"></select></label></div>
+          <div id="chart" class="chart" aria-label="Weekly chart"></div>
+          <div class="chart-note" id="chart-note"></div>
+        </div>
+        <aside class="week" id="week" aria-live="polite"></aside>
+      </div>
+    </section>
+    <section id="timeline" aria-labelledby="timeline-title">
+      <div class="section-head"><h2 id="timeline-title">Milestone timeline</h2><span class="section-meta">August–November 2026</span></div>
+      <div class="timeline-layout">
+        <div id="events" class="events" aria-label="Select a milestone"></div>
+        <article id="event" class="event" aria-live="polite"></article>
+      </div>
+    </section>
+    <section id="library" aria-labelledby="library-title">
+      <div class="section-head"><h2 id="library-title">Content explorer</h2><span id="count" class="section-meta" aria-live="polite"></span></div>
+      <div class="library-controls">
+        <label>Search captions or publishers <input id="search" type="search" placeholder="Search content"></label>
+        <label>Sort by <select id="sort"><option value="views">Most views</option><option value="likes">Most likes</option><option value="shares">Most shares</option><option value="follows">Most follows</option><option value="profile_visits">Most profile visits</option><option value="date">Most recent</option></select></label>
+        <button id="clear-week" type="button" hidden>Clear week filter</button>
+      </div>
+      <div class="table-wrap" tabindex="0" aria-label="Scrollable content results">
+        <table><thead><tr><th scope="col">Content</th><th scope="col">Published</th><th scope="col">Views</th><th scope="col">Likes</th><th scope="col">Shares</th><th scope="col">Follows</th><th scope="col">Profile visits</th></tr></thead><tbody id="rows"></tbody></table>
+      </div>
+      <button type="button" id="more">Show more</button>
+    </section>
+    <section class="data-source" aria-labelledby="data-title">
+      <h2 id="data-title">About the data</h2>
+      <p>The data used for the creation of this dashboard was sourced from Meta Instagram Insight Exports from August 20th - November 21st 2026. The data included 29 feed posts (including reels) and 100 stories. Lifetime metrics present a snapshot from November 21st 2026 and will continue to be updated.</p>
+    </section>
+  </main>
+  <canvas id="spectrum" aria-hidden="true"></canvas>
+  <span id="art-hint" role="tooltip" hidden>Grab and move</span>
+  <span id="art-keys" class="sr-only">Use the arrow keys to move this artwork within the title card.</span>
+  <audio id="track" loop preload="auto" src="after-class.wav" hidden></audio>
+  <div class="audio-overlay">
+    <span class="audio-note">relax, listen to some tunes!</span>
+    <svg class="audio-arrow" viewBox="0 0 38 18" aria-hidden="true"><path d="M1 12C9 15 18 4 35 8m-7-5 7 5-7 5"/></svg>
+    <button id="audio-toggle" type="button" aria-label="Play After Class FM" title="Play After Class FM">
+      <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg>
+      <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
+    </button>
+  </div>
+  <span id="audio-status" class="sr-only" role="status"></span>
+</body>
+</html>

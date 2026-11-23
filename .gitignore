@@ -1,0 +1,26 @@
+# Raw exports and local-only analytics
+/data.js
+/private-data/
+/exports/
+*.csv
+*.tsv
+/dist/*-private.*
+
+# Deployment and secrets
+/.openai/
+/.codex/
+/.agents/
+/.aws/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+
+# Local tooling
+node_modules/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
