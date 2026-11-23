@@ -1,6 +1,6 @@
 # SASE at UVA Instagram Insights
 
-Pirate Signal is a static dashboard with a weekly performance chart, milestones, a searchable content explorer, and an original audio loop.
+This dashboard hosts SASE @ UVA's weekly PR performance charts, milestones, a searchable content explorer, and an original audio loop.
 
 Serve the site with `python -m http.server 8000 --directory dist` and open `http://localhost:8000`.
 
